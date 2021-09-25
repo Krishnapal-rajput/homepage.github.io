@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Contact Form</title>
+    <link href="form.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- this is the master piece  -->
+    <!-- as I am not using backend  -->
+    <!-- it was problem for me to create an action for form  -->
+    <!-- but I did it  -->
+    <!-- when page loads it shoe an alert of submission  -->
+    <!-- and thank you page ehen user click ok  -->
+    <!-- and this will produce an effect of real webapp -->
+    <!-- it will also contain a button that will redirect user to homepage  -->
+    <!-- all the images and maps has been taken is only for education purposes -->
+    <!-- I do not harm any resourses  -->
+    <div class="wrapper">
+      <section>
+        <h1>Contact Form</h1>
+        <p>
+          Fill out the form below to contact our authorities for more
+          information about CS50.
+        </p>
+        <form action="/form" method="POST">
+          <fieldset>
+            <legend>Your contact information</legend>
+            <label for="name">Your name </label>
+            <input
+              autocomplete="off"
+              type="text"
+              id="name"
+              name="name"
+              autofocus
+              required
+            />
+            <label for="phone">Phone number</label>
+            <input
+              autocomplete="off"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Don't forget the area code!"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              autocomplete="off"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>About startup</legend>
+            <label for="date">Start date</label>
+            <input type="date" id="date" name="date" required />
+            <label for="qty"
+              >How many courses you want to study under CS50?</label
+            >
+            <input
+              type="number"
+              id="qty"
+              name="qty"
+              min="1"
+              max="10"
+              required
+            />
+
+            <p>Which course you prefer at first?</p>
+            <label>
+              <input type="radio" name="cs50" value="classic" checked />
+              CS50: Introduction to computer science
+            </label>
+            <label>
+              <input type="radio" name="cs50" value="AI" />
+              CS50: Artificial Intelligence
+            </label>
+            <label>
+              <input type="radio" name="cs50" value="webdev" />
+              CS50: Web Development
+            </label>
+            <label>
+              <input type="radio" name="cs50" value="gamedev" /> CS50: Game
+              Development
+            </label>
+
+            <label for="abtype"
+              >What type of study environment you prefer?</label
+            >
+            <select id="abtype" name="abtype">
+              <option selected>Select one...</option>
+              <option value="campus">On campus</option>
+              <option value="website">Online via official website</option>
+              <option value="edx">Online via edx</option>
+            </select>
+
+            <label for="comments">Special requests:</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <label>
+              <input
+                id="subscribe"
+                name="subscribe"
+                type="checkbox"
+                value="subscribe"
+              />Add me to your email list
+            </label>
+            <input
+              id="send_to"
+              type="hidden"
+              name="send_to"
+              value="yourEmailHere"
+            />
+            <button type="submit">
+              <a
+                href="./thanks.html"
+                style="
+                  text-decoration: none;
+                  list-style-type: none;
+                  color: white;
+                "
+                >Submit</a
+              >
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <aside>
+        <h3>Our Location</h3>
+        <div>
+          <iframe
+            width="325"
+            height="280"
+            frameborder="0"
+            src="https://www.bing.com/maps/embed?h=280&w=325&cp=42.37777892216363~-71.12325&lvl=15&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+            scrolling="no"
+          >
+          </iframe>
+          <div
+            style="
+              white-space: nowrap;
+              text-align: center;
+              width: 325px;
+              padding: 6px 0;
+            "
+          >
+            <a
+              id="largeMapLink"
+              target="_blank"
+              href="https://www.bing.com/maps?cp=42.37777892216363~-71.12325&amp;sty=r&amp;lvl=15&amp;FORM=MBEDLD"
+              >View Larger Map</a
+            >
+            &nbsp; | &nbsp;
+            <a
+              id="dirMapLink"
+              target="_blank"
+              href="https://www.bing.com/maps/directions?cp=42.37777892216363~-71.12325&amp;sty=r&amp;lvl=15&amp;rtp=~pos.42.37777892216363_-71.12325____&amp;FORM=MBEDLD"
+              >Get Directions</a
+            >
+          </div>
+        </div>
+        <address>
+          Harvard College.<br />
+          86 Brattle Street.<br />
+          Cambridge, MA 02138.
+        </address>
+      </aside>
+    </div>
+  </body>
+</html>
